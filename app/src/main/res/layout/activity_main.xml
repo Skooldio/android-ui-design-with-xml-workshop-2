@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:title="Workshop 2">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/img_profile_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/buttonClose"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="20dp"
+                    android:background="@drawable/selector_button_background_borderless"
+                    android:padding="6dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_close"
+                    app:layout_constraintBottom_toBottomOf="@id/buttonViewPortfolio"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/buttonViewPortfolio" />
+
+                <Button
+                    android:id="@+id/buttonViewPortfolio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/selector_button_background_borderless"
+                    android:drawableStart="@drawable/ic_portfolio"
+                    android:drawablePadding="8dp"
+                    android:padding="16dp"
+                    android:text="@string/portfolio"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageViewProfile"
+                    android:layout_width="94dp"
+                    android:layout_height="94dp"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:src="@drawable/img_profile"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/buttonClose" />
+
+                <View
+                    android:id="@+id/viewProfileBorder"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/shape_profile_border"
+                    app:layout_constraintBottom_toBottomOf="@id/imageViewProfile"
+                    app:layout_constraintEnd_toEndOf="@id/imageViewProfile"
+                    app:layout_constraintStart_toStartOf="@id/imageViewProfile"
+                    app:layout_constraintTop_toTopOf="@id/imageViewProfile" />
+
+                <TextView
+                    android:id="@+id/textViewTopRated"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/shape_badge_background_yellow"
+                    android:text="@string/top_rated"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/imageViewProfile"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewProfile" />
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/profile_name"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toStartOf="@id/textViewRating"
+                    app:layout_constraintStart_toStartOf="@id/textViewTopRated"
+                    app:layout_constraintTop_toBottomOf="@id/textViewTopRated" />
+
+                <TextView
+                    android:id="@+id/textViewRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:text="@string/review_average"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBaseline_toBaselineOf="@id/textViewName"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewStar" />
+
+                <ImageView
+                    android:id="@+id/imageViewStar"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewRating"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textViewRating" />
+
+                <ImageView
+                    android:id="@+id/imageViewLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="8dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_location"
+                    app:layout_constraintStart_toStartOf="@id/textViewName"
+                    app:layout_constraintTop_toBottomOf="@id/textViewName" />
+
+                <TextView
+                    android:id="@+id/textViewLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="@string/profile_location"
+                    android:textColor="@color/white_alpha_60"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/imageViewLocation"
+                    app:layout_constraintEnd_toStartOf="@id/textViewReviewCount"
+                    app:layout_constraintStart_toEndOf="@id/imageViewLocation"
+                    app:layout_constraintTop_toTopOf="@id/imageViewLocation" />
+
+                <TextView
+                    android:id="@+id/textViewReviewCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/review_count"
+                    android:textColor="@color/white_alpha_60"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/imageViewStar"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRating" />
+
+                <TextView
+                    android:id="@+id/textViewProfileDescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/profile_description"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/textViewReviewCount"
+                    app:layout_constraintStart_toStartOf="@id/imageViewLocation"
+                    app:layout_constraintTop_toBottomOf="@id/textViewLocation" />
+
+                <TextView
+                    android:id="@+id/textViewFollowerCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/follower_count"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@id/viewFollowDivider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewProfileDescription" />
+
+                <TextView
+                    android:id="@+id/textViewFollower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/follower"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/textViewFollowerCount"
+                    app:layout_constraintTop_toBottomOf="@id/textViewFollowerCount" />
+
+                <View
+                    android:id="@+id/viewFollowDivider"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="@color/gray"
+                    app:layout_constraintBottom_toBottomOf="@id/textViewFollower"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/textViewFollowerCount" />
+
+                <TextView
+                    android:id="@+id/textViewFollowingCount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:text="@string/following_count"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/viewFollowDivider"
+                    app:layout_constraintTop_toTopOf="@id/textViewFollowerCount" />
+
+                <TextView
+                    android:id="@+id/textViewFollowing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/following"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/textViewFollowingCount"
+                    app:layout_constraintTop_toBottomOf="@id/textViewFollowingCount" />
+
+                <androidx.constraintlayout.widget.Barrier
+                    android:id="@+id/barrierFollow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:barrierDirection="bottom"
+                    app:constraint_referenced_ids="textViewFollower, textViewFollowing" />
+
+                <Button
+                    android:id="@+id/buttonFollow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:background="@drawable/selector_button_background_border_white"
+                    android:text="@string/follow"
+                    android:textAllCaps="false"
+                    android:textColor="@color/selector_button_background_border_white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/guidelineProfileButton"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/barrierFollow" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guidelineProfileButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintGuide_percent="0.4"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/selector_button_background_border_yellow"
+                    android:text="@string/contact_me"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/guidelineProfileButton"
+                    app:layout_constraintTop_toTopOf="@id/buttonFollow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/view_review_item" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

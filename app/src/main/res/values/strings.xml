@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Skooldio Workshop 2</string>
+
+    <!-- Main -->
+    <string name="portfolio">Portfolio</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="follower">Follower</string>
+    <string name="following">Following</string>
+    <string name="contact_me">Contact Me</string>
+    <string name="follow">Follow</string>
+    <string name="review">Review</string>
+
+    <!-- Mock : Main -->
+    <string name="profile_name">TaalayPix</string>
+    <string name="profile_location">Bangkok, Thailand</string>
+    <string name="profile_description">Creative Photographer, Videographer, Photo Editor, Video Editor, Content Writer</string>
+    <string name="follower_count">3,543</string>
+    <string name="following_count">578</string>
+    <string name="review_count">241 reviews</string>
+    <string name="review_average">5.0</string>
+
+    <!-- Mock : Review View Holder -->
+    <string name="reviewer">Akexorcist</string>
+    <string name="comment">The best photographer ever. very understanding and patient.</string>
+    <string name="rating">5</string>
+    <string name="review_date">14 hours ago</string>
+</resources>
