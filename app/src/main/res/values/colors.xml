@@ -7,6 +7,7 @@
     <color name="yellow">#FFCA28</color>
     <color name="yellow_dark">#DBA604</color>
     <color name="black">#000000</color>
+    <color name="black_alpha_10">#1A000000</color>
     <color name="black_alpha_60">#99000000</color>
     <color name="black_alpha_34">#57000000</color>
     <color name="gray">#707070</color>
