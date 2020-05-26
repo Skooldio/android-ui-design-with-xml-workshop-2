@@ -5,4 +5,10 @@
 
     <corners android:radius="100dp" />
 
+    <padding
+        android:bottom="14dp"
+        android:left="14dp"
+        android:right="14dp"
+        android:top="14dp" />
+
 </shape>
