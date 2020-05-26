@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="24dp"
     android:layout_marginEnd="24dp"
-    android:layout_marginBottom="12dp"
-    app:cardBackgroundColor="@color/white"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="16dp"
-    app:contentPadding="16dp">
+    android:layout_marginBottom="12dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,9 +20,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/reviewer"
                 android:textColor="@color/black"
-                android:textSize="16sp"
-                android:text="@string/reviewer" />
+                android:textSize="16sp" />
 
             <ImageView
                 android:layout_width="16dp"
@@ -40,25 +35,25 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/rating"
                 android:textColor="@color/yellow"
-                android:textSize="16sp"
-                android:text="@string/rating" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/comment"
             android:textColor="@color/black_alpha_60"
-            android:textSize="12sp"
-            android:text="@string/comment" />
+            android:textSize="12sp" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:text="@string/review_date"
             android:textColor="@color/black_alpha_34"
-            android:textSize="12sp"
-            android:text="@string/review_date" />
+            android:textSize="12sp" />
     </LinearLayout>
-</androidx.cardview.widget.CardView>
+</FrameLayout>
