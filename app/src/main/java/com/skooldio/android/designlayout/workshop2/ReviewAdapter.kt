@@ -3,6 +3,8 @@ package com.skooldio.android.designlayout.workshop2
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.skooldio.android.designlayout.workshop2.databinding.ViewHeaderItemBinding
+import com.skooldio.android.designlayout.workshop2.databinding.ViewReviewItemBinding
 
 class ReviewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     companion object {
@@ -11,8 +13,8 @@ class ReviewAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder = when (viewType) {
-        TYPE_HEADER -> HeaderViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_header_item, parent, false))
-        else -> ReviewViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.view_review_item, parent, false))
+        TYPE_HEADER -> HeaderViewHolder(ViewHeaderItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+        else -> ReviewViewHolder(ViewReviewItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
     }
 
     override fun getItemCount(): Int = 20 + 1
